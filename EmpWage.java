@@ -1,5 +1,7 @@
 
 public class EmpWage {
+
+
 	public static void main (String []args) {
 		
 		int fullTime = 1;
@@ -18,10 +20,6 @@ public class EmpWage {
 			int PartTime = 1;
 			int MonthDay= 20;
 			int Month = 0;
-			int MaxHours = 0;
-			int WorkingHrs = 0;
-			int month = Month + 1;
-			int maxHours = MaxHours + WorkingHrs ;
 			if(fullTime == empCheck)
 			
 			System.out.println("DailyWage : " + WagePerHour*FullDayHours);
@@ -41,14 +39,48 @@ public class EmpWage {
 
 			else
 				System.out.println("No Monthly  Wage, Employee is Absend");
+						
+				final int IS_PART_TIME = 1;
+				final int IS_FULL_TIME = 2;
+			final int EMP_RATE_PER_HOURS = 20;
+			final int MAX_HRS_IN_MONTH=100;
+				int emphours=0;
+				int totalEmpWage=0;
+				int totalEmpHrs=0;
+				int totalWorkingDay=0;
+				final int NUM_OF_WORK_DAY=2;
+				
+				
+				while (totalEmpHrs <=MAX_HRS_IN_MONTH && totalWorkingDay < NUM_OF_WORK_DAY) {
+					totalWorkingDay++;
+				}
+				
+				for (int day = 0; day < NUM_OF_WORK_DAY; day++) {
+	int empCheck2 =(int) Math.floor(Math.random()*10%3);
+				
+			switch (empCheck2) {
+			case IS_PART_TIME:
+				emphours=4;
+				break;
+			case IS_FULL_TIME:
+				emphours=8;
+				break;
+				default:
+					emphours=0;
+					
+			}
+					int empWage = emphours*EMP_RATE_PER_HOURS;
+                    totalEmpWage +=  empWage;
+		            totalEmpHrs += emphours;
+		            System.out.println("Day#:" + totalWorkingDay +  "emp hrs  "  + emphours);
+		            
+				}
+			        System.out.println("Emp Wage : " + emphours*EMP_RATE_PER_HOURS);
+				
+				     System.out.println("Total Emp Wage :" + totalEmpWage);
 			
-			if(maxHours == 100 && month == 20 )	{
-				System.out.println("Monthly Wage : " + MonthDay*MaxHours*WagePerHour);
-			break;
 			
-			else
-				System.out.println("No Monthly wage,employee is absent" + Month);
-		
+				}
 		}
-	}
-}
+	
+
