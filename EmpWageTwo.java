@@ -8,7 +8,7 @@
  *
  */
 
-public class EmpWage{
+public class EmpWageTwo{
 	final static int PART_TIME = 1;
 	final static int FULL_TIME=2;
 	private int partTimeHrs;
@@ -18,8 +18,7 @@ public class EmpWage{
 	private int DAY_PER_MONTH;
 	private  int MAX_HRS;
 
-	public EmpWage (String Company, int fullTimeHrs, int partTimeHrs, int WAGE_PER_HRS, int DAY_PER_MONTH, int MAX_HRS)
-	{
+	public EmpWageTwo (String Company, int fullTimeHrs, int partTimeHrs, int 						WAGE_PER_HRS, int DAY_PER_MONTH, int MAX_HRS){
 		this.Company=Company;
 		this.partTimeHrs=partTimeHrs;
 		this.fullTimeHrs=fullTimeHrs;
@@ -126,14 +125,14 @@ public class EmpWage{
 public static void main (String []args) {
 		
 		System.out.println("welcome to employeewage");
-		EmpWage Dmart =new EmpWage("DMart",8,4,20,20,100);
+		EmpWageTwo Dmart =new EmpWageTwo("DMart",8,4,20,20,100);
 		
 		Dmart.Attaindence();
 		Dmart.CalculateDailyWage();
 		Dmart.monthlyWage();
 		Dmart.maxEmpWage();
 		Dmart.dispCompanyInfo();
-		EmpWage Reliance = new EmpWage("Reliance",12,6,25,26,150);
+		EmpWageTwo Reliance = new EmpWageTwo("Reliance",12,6,25,26,150);
 		Reliance.Attaindence();
 		Reliance.CalculateDailyWage();
 		Reliance.monthlyWage();
